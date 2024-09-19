@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  <!--favicon-img--> 
+   <link rel="icon" type="image/png" href="images/favicon.png">
+   <!--favicon-img-->
+   <!--main css file should not be removed -->
+    <link rel="stylesheet" href="css/index.css">
+    <!--main css file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <!--contains all the div-->
+    <div id="all">
+    <!--mouse  follower-->
+        <div class="cursor"></div>
+    <!--mouse  follower-->
+    <!--loader-->
+        <div id="loader">
+            <svg id="svgs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="500" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="24b44dde55"><path d="M 147 130 L 201 130 L 201 184 L 147 184 Z M 147 130 " clip-rule="nonzero"/></clipPath><clipPath id="79130192d4"><path d="M 187.761719 183.574219 L 147.835938 143.648438 L 160.574219 130.914062 L 200.496094 170.835938 Z M 187.761719 183.574219 " clip-rule="nonzero"/></clipPath><clipPath id="b0a9fc4526"><path d="M 125 173 L 201 173 L 201 249 L 125 249 Z M 125 173 " clip-rule="nonzero"/></clipPath><clipPath id="6d959c9913"><path d="M 187.535156 248.035156 L 125.410156 185.910156 L 138.148438 173.175781 L 200.273438 235.300781 Z M 187.535156 248.035156 " clip-rule="nonzero"/></clipPath><clipPath id="57b9cef842"><path d="M 177 175 L 248 175 L 248 246 L 177 246 Z M 177 175 " clip-rule="nonzero"/></clipPath><clipPath id="cf657e62c8"><path d="M 177.585938 232.4375 L 234.300781 175.722656 L 247.039062 188.460938 L 190.324219 245.175781 Z M 177.585938 232.4375 " clip-rule="nonzero"/></clipPath><clipPath id="a38a79b898"><path d="M 177 126 L 232 126 L 232 181 L 177 181 Z M 177 126 " clip-rule="nonzero"/></clipPath><clipPath id="aae1fb6cf6"><path d="M 177.820312 167.980469 L 218.839844 126.960938 L 231.574219 139.699219 L 190.558594 180.714844 Z M 177.820312 167.980469 " clip-rule="nonzero"/></clipPath><clipPath id="9034a7dc5f"><path d="M 130 144 L 185 144 L 185 199 L 130 199 Z M 130 144 " clip-rule="nonzero"/></clipPath><clipPath id="b69a92d9bd"><path d="M 172.046875 198.574219 L 130.824219 157.351562 L 143.5625 144.613281 L 184.78125 185.835938 Z M 172.046875 198.574219 " clip-rule="nonzero"/></clipPath><clipPath id="68f2bd32dc"><path d="M 125.410156 144.617188 L 143.421875 144.617188 L 143.421875 248.035156 L 125.410156 248.035156 Z M 125.410156 144.617188 " clip-rule="nonzero"/></clipPath><clipPath id="03bd3c68d8"><path d="M 231.574219 144.617188 L 249.585938 144.617188 L 249.585938 248.035156 L 231.574219 248.035156 Z M 231.574219 144.617188 " clip-rule="nonzero"/></clipPath><clipPath id="259072d137"><path d="M 190 144 L 245 144 L 245 199 L 190 199 Z M 190 144 " clip-rule="nonzero"/></clipPath><clipPath id="48ab3b7bb9"><path d="M 190.675781 185.835938 L 231.898438 144.613281 L 244.632812 157.351562 L 203.410156 198.574219 Z M 190.675781 185.835938 " clip-rule="nonzero"/></clipPath><clipPath id="9a9129609a"><path d="M 172.660156 187.71875 L 202.808594 187.71875 L 202.808594 217.867188 L 172.660156 217.867188 Z M 172.660156 187.71875 " clip-rule="nonzero"/></clipPath><clipPath id="0ef6b4e2a2"><path d="M 187.734375 187.71875 L 202.808594 202.792969 L 187.734375 217.867188 L 172.660156 202.792969 Z M 187.734375 187.71875 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#24b44dde55)"></g><g clip-path="url(#79130192d4)"><path fill="#ffffff" d="M 187.761719 183.574219 L 147.859375 143.671875 L 160.597656 130.9375 L 200.496094 170.835938 Z" />
+            </g><g clip-path="url(#24b44dde55)"><g clip-path="url(#79130192d4)"><path fill="#ffffff" d="M 187.761719 183.574219 L 147.859375 143.671875 L 160.597656 130.9375 L 200.496094 170.835938 Z M 187.761719 183.574219 " fill-opacity="1" fill-rule="nonzero"/></g></g><g clip-path="url(#b0a9fc4526)"><g clip-path="url(#6d959c9913)"><path fill="#ffffff" d="M 187.535156 248.035156 L 125.394531 185.898438 L 138.132812 173.160156 L 200.273438 235.300781 Z M 187.535156 248.035156 " fill-opacity="1" fill-rule="nonzero"/></g></g><g clip-path="url(#57b9cef842)"><g clip-path="url(#cf657e62c8)"><path fill="#ffffff" d="M 177.585938 232.4375 L 234.304688 175.722656 L 247.039062 188.457031 L 190.324219 245.175781 Z M 177.585938 232.4375 " fill-opacity="1" fill-rule="nonzero"/></g></g><g clip-path="url(#a38a79b898)"><g clip-path="url(#aae1fb6cf6)"><path fill="#ffffff" d="M 177.820312 167.980469 L 218.816406 126.984375 L 231.554688 139.71875 L 190.558594 180.714844 Z M 177.820312 167.980469 " fill-opacity="1" fill-rule="nonzero"/></g></g><g clip-path="url(#9034a7dc5f)"><g clip-path="url(#b69a92d9bd)"><path fill="#ffffff" d="M 172.046875 198.574219 L 130.800781 157.328125 L 143.539062 144.59375 L 184.78125 185.835938 Z M 172.046875 198.574219 " fill-opacity="1" fill-rule="nonzero"/></g></g><g clip-path="url(#68f2bd32dc)"><path fill="#ffffff" d="M 125.410156 248.035156 L 125.410156 144.609375 L 143.421875 144.609375 L 143.421875 248.035156 Z M 125.410156 248.035156 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#03bd3c68d8)"><path fill="#ffffff" d="M 231.574219 248.035156 L 231.574219 144.609375 L 249.585938 144.609375 L 249.585938 248.035156 Z M 231.574219 248.035156 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#259072d137)"><g clip-path="url(#48ab3b7bb9)"><path fill="#ffffff" d="M 190.675781 185.835938 L 231.917969 144.59375 L 244.65625 157.328125 L 203.410156 198.574219 Z M 190.675781 185.835938 " fill-opacity="1" fill-rule="nonzero"/></g></g><g clip-path="url(#9a9129609a)"><g clip-path="url(#0ef6b4e2a2)"><path fill="#ffffff" d="M 172.660156 187.71875 L 202.808594 187.71875 L 202.808594 217.867188 L 172.660156 217.867188 Z M 172.660156 187.71875 " fill-opacity="1" fill-rule="nonzero"/></g></g></svg>
+
+            <div class="logo-name"><img src="./images/Black and White Monogram Logo (6).png" alt=""></div>
+        </div>
+    <!--loader-end-->
+    <!--link-screen-->
+        <div id="breaker">
+        </div>
+        <div id="breaker-two">
+        </div>
+    <!--link-screen-->
+        <!--Main-Section-->
+        <!--Navigator-fullscreen-->
+        <div id="navigation-content">
+            <div class="logo">
+                <img src="images/2-Photoroom.png" alt="logo">
+            </div>
+            <div class="navigation-close">
+                <span class="close-first"></span>
+                <span class="close-second"></span>
+            </div>
+            <div class="navigation-links">
+                <a href="#" data-text="HOME" id="home-link" >HOME</a>
+                <a href="#" data-text="ABOUT" id="about-link" >ABOUT</a>
+                <a href="#" data-text="TEAM" id="team-link" >TEAM</a>
+                <a href="#" data-text="BLOG" id="blog-link" >BLOG</a>
+                <a href="#" data-text="PORTFOLIO" id="portfolio-link" >PORTFOLIO</a>
+                <a href="#" data-text="CONTACT" id="contact-link" >CONTACT</a>
+            </div>
+        </div>
+        <!--Navigator-Fullscreen END-->
+          <!--Home Page-->
+        <!--Menubar-->
+        <div id="navigation-bar">
+            <img src="images/Black and White Monogram Logo-Photoroom.png" alt="logo">
+            <div class="menubar">
+                <span class="first-span"></span>
+                <span class="second-span"></span>
+                <span class="third-span"></span>
+            </div>
+        </div>
+        <!--Menubar End-->
+          <!--Header-->
+        <div id="header">
+            <div id="particles"></div>
+              <!--Social Media Links-->
+            <div class="social-media-links">
+               <a href="#"><i class="fa-brands fa-facebook"></i></a><!--Your instagram homepage link inser in place of "#"-->
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+            </div>
+            <!--Social Media Links end-->
+            <div class="header-content">
+                <div class="header-content-box">
+                <div class="firstline"><span class="color">Marc</span> Miranda</div>
+                <div class="secondline">
+                I'm 
+            <span class="txt-rotate color" data-period="1200"data-rotate='[" a Web Developer.", " an AI Engineer.", " a Software Developer."]'></span>
+            <span class="slash">|</span>
+        </div>
+                    <div class="contact">
+                <a href="Mailto:marcmrnda@gmail.com"><i class="fa-solid fa-envelope"></i></a><!--Your email Id write in place of "#"-->
+                <a href="Tel:09912600667"><i class="fa-solid fa-phone"></i></a><!--Your telephone number Id write in place of "#"-->
+                    </div>    
+            </div>
+            </div>
+            <!--header image-->
+            <div class="header-image">
+            <img src="images/114251.jpg" alt="logo">
+            </div>
+            <!--header image end-->
+        </div>
+           <!--Header End-->
+        <!--HomePage End-->
+        <!--Main-Section End-->
+        <!--about-->
+        <div id="about">
+            <div class="color-changer">
+            <div class="color-panel">
+                <img src="images/gear.png" alt="">
+            </div>
+            <div class="color-selector">
+                <div class="heading">Custom Colors</div>
+                <div class="colors">
+                    <ul >
+                    <li>
+                        <a href="#0" class="color-red " title="color-red"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-purple" title="color-purple"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-gold" title="color-gold"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-green" title="color-green"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-blue" title="color-blue"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-pink" title="color-pink"></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <!--about content-->
+            <div id="about-content">
+                <div class="about-header">
+                    About <span class="color">Me</span>
+                    <span class ="header-caption">Get to Know <span class="color"> Me.</span></span>
+                </div>
+                <div class="about-main">
+            <div class="about-first-paragraph wow">
+            <!--about description-->
+               <span class="about-first-line">
+                    I'm a 3rd Year 
+                    <span class="color">Computer Science Student</span>
+                     studying at National University Lipa</span>
+                     <br>
+               <span class="about-second-line"> Driven by a love for technology and problem-solving. My studies and hands-on projects have equipped me with skills in JavaScript, C++, and more. I’m enthusiastic about applying my knowledge to create impactful solutions and stay engaged with the latest tech advancements.</span>
+               <div class="cv">
+                <a href="images/Beige and White Minimalist Resume A4.pdf" download target="_blank"><button>Download <span class="colors">CV</span></button></a>
+            </div>
+            </div>
+            <!--about picture-->
+            <div class="about-img">
+                <img src="images/IMG_20240911_200802_976.jpg" alt="Your Image">
+            </div>
+            </div>
+    
+            </div>
+            <!--services start-->
+            <div id="services">
+                <div class="color-changer">
+                    <div class="color-panel">
+                        <img src="images/gear.png" alt="">
+                    </div>
+                    <div class="color-selector">
+                        <div class="heading">Custom Colors</div>
+                        <div class="colors">
+                            <ul >
+                            <li>
+                                <a href="#0" class="color-red " title="color-red"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-purple" title="color-purple"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-gold" title="color-gold"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-green" title="color-green"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-blue" title="color-blue"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-pink" title="color-pink"></a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+            <!--services header-->
+                    <div class="services-heading wow">
+                        <span class="color">My</span> Services
+                    </div>
+            <!--services header end-->
+            <!--services content-->
+                    <div class="services-content">
+                           <div class="service-one service wow">
+                               <div class="service-img">
+                               <img src="images/web.png" alt="service-one">
+                               </div>
+                               <div class="service-description">
+                                <h2>Web Development</h2>
+                                <p>We build responsive, user-friendly websites. From sleek designs to robust functionality, we create them to perform well on any device.
+                                </p>
+                               </div>
+                           </div>
+                           <div class="service-two service wow">
+                               <div class="service-img">
+                               <img src="images/ai.png" alt="service-two">
+                               </div>
+                               <div class="service-description">
+                                <h2>AI Engineering</h2>
+                                <p>We design and implement AI solutions, from machine learning models to data-driven insights, tailored to enhance your business and drive innovation.
+                                </p>
+                               </div>
+                           </div>
+                           <div class="service-three service wow">
+                            <div class="service-img">
+                               <img src="images/software.png" alt="service-three">
+                            </div>
+                            <div class="service-description">
+                                <h2>Software Development</h2>
+                                <p>We build custom software tailored to consumers' needs, focusing on quality, scalability, and efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!--services content end-->
+            <!--services end-->
+            <div id="skills">
+                <div class="skills-header">
+                     My <span class="color"> Skills</span>
+                </div>
+                <div class="skills-content " style="text-align: center;">
+                    <div class="skill-html skill">
+                        <div class="skill-text">
+                    <div class="html">
+                        HTML/CSS
+                    </div>
+                        </div>
+                    <div class="html-prog wow prog">
+                 <div class="html-progress wow">95%</div>
+                    </div>
+                    </div>
+                    <div class="skill-html skill">
+                        <div class="skill-text">
+                    <div class="html">
+                      Javascript
+                    </div>
+                        </div>
+                    <div class="html-prog wow prog">
+                 <div class="js-progress wow">60%</div>
+                    </div>
+                    </div>
+                    <div class="skill-html skill">
+                        <div class="skill-text">
+                    <div class="html">
+                        C++
+                    </div>
+                        </div>
+                    <div class="html-prog wow prog">
+                 <div class="adobe-progress wow">40%</div>
+                    </div>
+                    </div>
+                    <div class="skill-html skill">
+                        <div class="skill-text">
+                    <div class="html">
+                        PHP
+                    </div>
+                        </div>
+                    <div class="html-prog wow prog">
+                 <div class="php-progress wow">55%</div>
+                    </div>
+                    </div>
+                    <div class="skill-html skill">
+                        <div class="skill-text">
+                    <div class="html">
+                        JQuery
+                    </div>
+                        </div>
+                    <div class="html-prog wow prog">
+                 <div class="jquery-progress wow">25%</div>
+                    </div>
+                    </div>
+                    <div class="skill-html skill">
+                        <div class="skill-text">
+                    <div class="html">
+                        Python
+                    </div>
+                        </div>
+                    <div class="html-prog wow prog">
+                 <div class="seo-progress wow">27%</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    <!--copyright-section You Can Remove After Downloading-->
+            <div class="footer">
+             <div class="footer-text">
+                 <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Marc Miranda
+             </div>
+            </div>
+    <!--copyright-section-->
+        </div>
+        <!--about end-->
+        <div id="team">
+            <div class="team-header"> <span class="color"> My </span> Team Members
+                <span class ="header-caption"> This is <span class="color"> iNUvators</span></span></div>
+                <div class="slider-images">
+                    <div class="slider-img">
+                      <img src="images/niccollodeon-18092024-0001.jpg" alt="1" />
+                      <h1 class="niccollo">Niccollo</h1>
+                      <div class="details">
+                        <h2>Mark Niccollo</h2>
+                        <p>Full-Stack Developer/AI Engineer</p>
+                      </div>
+                    </div>
+                    <div class="slider-img">
+                      <img src="images/FB_IMG_1726661040747.jpg" alt="2" />
+                      <h1 class="diana">Diana</h1>
+                      <div class="details">
+                        <h2>Diana</h2>
+                        <p>Full-Stack Developer/AI Engineer</p>
+                      </div>
+                    </div>
+                    <div class="slider-img">
+                      <img src="images/80562777_3183054988375984_5264778002427805696_n.jpg" alt="3" />
+                      <h1 class="ian">Ian</h1>
+                      <div class="details">
+                        <h2>Ian Cedric</h2>
+                        <p>Full-Stack Developer/Editor</p>
+                      </div>
+                    </div>
+                    <div class="slider-img active">
+                      <img src="images/FB_IMG_1726660946149.jpg" alt="4" />
+                      <h1 class="mikay">Mikay</h1>
+                      <div class="details">
+                        <h2>Angel Mikaela</h2>
+                        <p>Project Manager/Full-Stack Developer</p>
+                      </div>
+                    </div>
+                    <div class="slider-img">
+                      <img src="images/FB_IMG_1726661377402.jpg" alt="5" />
+                      <h1 class="zab">Zab</h1>
+                      <div class="details">
+                        <h2>Zabdiel</h2>
+                        <p>Full-Stack Developer/AI Engineer</p>
+                      </div>
+                    </div>
+                    <div class="slider-img">
+                      <img src="images/Image_20240805_170939.jpg" alt="6" />
+                      <h1 class="kat">Kat</h1>
+                      <div class="details">
+                        <h2>Katrina</h2>
+                        <p>Business Analyst/AI Engineer</p>
+                      </div>
+                    </div>
+                    <div class="slider-img">
+                      <img  src="images/IMG_20240918_201636.jpg" alt="7" />
+                      <h1 class="jm">JM</h1>
+                      <div class="details">
+                        <h2>John Michael</h2>
+                        <p>Full-Stack Developer/AI Engineer</p>
+                      </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="images/FB_IMG_1726661453995.jpg" alt="8" />
+                        <h1 class="jc">JC</h1>
+                        <div class="details">
+                          <h2>Jan Carlo</h2>
+                          <p>Full-Stack Developer/AI Engineer</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="color-changer">
+                    <div class="color-panel">
+                        <img src="images/gear.png" alt="">
+                    </div>
+                    <div class="color-selector">
+                        <div class="heading">Custom Colors</div>
+                        <div class="colors">
+                            <ul >
+                            <li>
+                                <a href="#0" class="color-red " title="color-red"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-purple" title="color-purple"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-gold" title="color-gold"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-green" title="color-green"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-blue" title="color-blue"></a>
+                            </li>
+                            <li>
+                                <a href="#0" class="color-pink" title="color-pink"></a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                  <div class="footer">
+                    <div class="footer-text">
+                        <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Marc Miranda
+                    </div>
+                   </div>
+        </div>
+        <!--portfolio-->
+        <div id="portfolio">
+            <div class="color-changer">
+                <div class="color-panel">
+                    <img src="images/gear.png" alt="">
+                </div>
+                <div class="color-selector">
+                    <div class="heading">Custom Colors</div>
+                    <div class="colors">
+                        <ul >
+                        <li>
+                            <a href="#0" class="color-red " title="color-red"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-purple" title="color-purple"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-gold" title="color-gold"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-green" title="color-green"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-blue" title="color-blue"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-pink" title="color-pink"></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            <div class="portfolio-header"> <span class="color"> My </span> Portfolio
+            <span class ="header-caption"> Some Of My <span class="color"> Works</span></span></div>
+             <div id="portfolio-content">
+                 <div class="portfolio portfolio-first">
+                     <div class="portfolio-image">
+                        <img src="images/Copy of iSHARE - PSC_1721831466.png" alt="portfolio-first">
+                     </div>
+                     <div class="portfolio-text">
+                         <h2>iSHARE</h2>
+                         <p>iSHARE: Student Help and Resource Exchange is a pioneering platform dedicated to the betterment of Filipino students by creating a secure and thriving ecosystem for academic resource sharing and skill-based services. We believe in the transformative power of education and the immense potential residing within the student community. With iSHARE, we aim to provide students with a holistic solution that not only enhances their educational journey but also allows them to leverage their skills and talents for financial support.</p>
+                         <div class="button"><a href="https://github.com/iNUvators" target="_blank"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
+                     </div>
+                 </div>
+                 <div class="portfolio portfolio-second">
+                    <div class="portfolio-image">
+                        <img src="images/Copy of iSHARE - PSC (1)_1721835973.png" alt="portfolio-second">
+                    </div>
+                    <div class="portfolio-text">
+                        <h2>LAYA</h2>
+                        <p>LAYA, an innovative legal assistance project developed by the iNUvators team from National University - Lipa. LAYA aims to revolutionize legal support in the Philippines by leveraging cutting-edge AI technology to provide free legal guidance and support to all Filipinos. This repository contains the source code and documentation for the LAYA application.</p>
+                        <div class="button"><a href="https://github.com/iNUvators/LAYA" target="_blank"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
+                    </div>
+                </div>
+             
+                <div class="portfolio portfolio-third">
+                    <div class="portfolio-image">
+                        <img src="images/Copy of NU Arcane (iPAWS).png" alt="portfolio-third">
+                    </div>
+                    <div class="portfolio-text">
+                        <h2>iPAWS</h2>
+                        <p>iPAWS, is at the forefront of pet care innovation. We've crafted an AI-powered smart collar that seamlessly integrates into the lives of pets and their owners, going beyond traditional pet care. iPAWS is not just a collar; it's a smart companion and comprehensive solution that bridges the gap between traditional pet care and modern technology, providing real-time insights and fostering a deeper connection between pets and their owners.</p>
+                        <div class="button"><a href="https://github.com/iNUvators" target="_blank"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
+                    </div>
+                </div>
+                 </div>
+                    <!--copyright-section You Can Remove After Downloading-->
+            <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Willy Wonkas
+                </div>
+               </div>
+       <!--copyright-section-->
+             </div>
+        <!--portfolio end-->
+        <!--blog-->
+        <div id="blog">
+            <div class="color-changer">
+                <div class="color-panel">
+                    <img src="images/gear.png" alt="">
+                </div>
+                <div class="color-selector">
+                    <div class="heading">Custom Colors</div>
+                    <div class="colors">
+                        <ul >
+                        <li>
+                            <a href="#0" class="color-red " title="color-red"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-purple" title="color-purple"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-gold" title="color-gold"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-green" title="color-green"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-blue" title="color-blue"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-pink" title="color-pink"></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        <div class="blog-header"> Blogs</span>
+            <span class ="header-caption"> My Latest <span class="color"> blog posts.</span></span></div>
+            <div class="blog-content">
+                 <div class="blogs">
+                    <a href="#popup" id="modalOpen">
+                    <div class="img">
+                        <img src="images/20230607_134542.jpg" alt="blog-two">
+                        <div class="blog-date">16 Jun,23</div>
+                    </div>
+                    <div class="blog-text">
+                        <h3>Japan Getaway</h3>
+                        <p>An Unforgettable Tour to the Land of the Sun, Japan is one of my dream countries to visit, and my wish was granted this last year. We roam around the Kansai Region, starting from Osaka, Kyoto, and finally Nagoya. Its a tiring but rewarding kinda trip.</p>
+                    </div></a>
+                    <div class="popup" id="popup">
+                        <div class="popup-inner">
+                          <div class="popup__photo">
+                            <img src="images/20230607_134542.jpg" alt="">
+                          </div>
+                          <div class="popup__text">
+                            <h1>Land of the Rising Sun, Japan</h1>
+                            <p>An Unforgettable Tour to the Land of the Rising Sun, Japan is one of my dream countries to visit, and my wish was granted this last year. We roam around the Kansai Region, starting from Osaka, Kyoto, and finally Nagoya. Its a tiring but rewarding kinda trip, the taxi rides are expensive so the only transport is walking and subway, but all of it is worth it especially when it comes food. Tonkatsu, Meat Bun, and my most favorite of all Ramen. One of the best ramen shop, I ever experience trying is the Ichiran Ramen, its a usual ramen but it definitely not normal, the broth is just immaculate and during that time I have a hard time finishing a bowl of ramen but then after I tasted that specific ramen, I never even realized, I gulped it all. This Japan trip is something to remember and one day I hope I will come back and this time I hope God give me a chance to bring the love of my life. </p>
+                          </div>
+                          <a class="popup__close" href="#">X</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="blogs">
+                    <a href="#popup1" id="modalOpen">
+                    <div class="img">
+                        <img src="images/20230730_124656.jpg" alt="blog-two">
+                        <div class="blog-date">26 Aug,23</div>
+                    </div>
+                    <div class="blog-text">
+                        <h3>Thailand Escapades</h3>
+                        <p>My second time in Thailand, especially in its capital Bangkok. Its still hot as fuck, imagine the heat, its like heat coming out of the rear end of an aircon. Still, a great escape from troubles and problems</p>
+                    </div></a>
+                    <div class="popup" id="popup1">
+                        <div class="popup-inner">
+                          <div class="popup__photo">
+                            <img src="images/20230730_124656.jpg" alt="">
+                          </div>
+                          <div class="popup__text">
+                            <h1>Land of Smiles, Thailand</h1>
+                            <p>My second time in Thailand, especially in its capital Bangkok. Its still hot as fuck, imagine the heat, its like heat coming out of the rear end of an aircon. Still, a great escape from troubles and problems. One of the best things here in Thailand is of course, their foods. The Thai Cuisine is a chef's kiss, all of them is so freaking delicious starting from Pad thai, Thai Curry, and my new obsession Thai Milktea. Its one of the best country you can visit to be honest, people are great, the places are great and their temples are beautiful, definitely will come back for the third time around. </p>
+                          </div>
+                          <a class="popup__close" href="#">X</a>
+                        </div>
+                      </div>
+                </div>            
+                <div class="blogs">
+                    <a href="#popup2" id="modalOpen">
+                    <div class="img">
+                        <img src="images/1726724063250.jpg" alt="blog-two">
+                        <div class="blog-date">15 Aug,24</div>
+                    </div>
+                    <div class="blog-text">
+                        <h3>Vietnam Hiking</h3>
+                        <p>Another Hot Country, even hotter than the Philippines, as it goes 40+ degrees on a normal day imagine that, but that hot place is in Hanoi. You will never believe this but there's a place in Vietnam, a tropical country that can snow in the winter.</p>
+                    </div></a>
+                    <div class="popup" id="popup2">
+                        <div class="popup-inner">
+                          <div class="popup__photo">
+                            <img src="images/1726724063250.jpg" alt="">
+                          </div>
+                          <div class="popup__text">
+                            <h1>Land of the Blue Dragons, Vietnam</h1>
+                            <p>Another Hot Country, even hotter than the Philippines, as it goes 40+ degrees on a normal day imagine that, but that hot place is in Hanoi. You will never believe this but there's a place in Vietnam, a tropical country that can snow in the winter and you can compare it to our very own Baguio City, because you will climb the mountain with the total height of 3143 meters, and that mountain is called Fansipan and it is located on the city called Sapa where everywhere you look at is full of rice terrraces and like I stated earlier it feels like Baguio City but colder. Definitely will come back, as this is one of the best country I been with.</p>
+                          </div>
+                          <a class="popup__close" href="#">X</a>
+                        </div>
+                      </div>
+                </div>      
+                <div class="blogs">
+                    <a href="#popup3" id="modalOpen">
+                    <div class="img">
+                        <img src="images/IMG_5915-Enhanced-NR.jpg" alt="blog-two">
+                        <div class="blog-date">16 Sept,23</div>
+                    </div>
+                    <div class="blog-text">
+                        <h3>Start Up Pitching Competition</h3>
+                        <p>One of the best experience in my life, I met and get close with two of the most intelligent and amazing human beings which is Ian Medina, and Angel Mikaela. We are assigned by the program chair at that time to compete to a regional battle for the gold for the best start-up idea that has potential to be the next Microsoft, Apple and etc. </p>
+                    </div></a>
+                    <div class="popup" id="popup3">
+                        <div class="popup-inner">
+                          <div class="popup__photo">
+                            <img src="images/IMG_5915-Enhanced-NR.jpg" alt="">
+                          </div>
+                          <div class="popup__text">
+                            <h1>People of Competitiveness, NU Bytes</h1>
+                            <p>One of the best experience in my life, I met and get close with two of the most intelligent and amazing human beings which is Ian Medina, and Angel Mikaela. We are assigned by the program chair at that time to compete to a regional battle for the gold for the best start-up idea that has potential to be the next Microsoft, Apple and etc. We successfully pitched and answered their questions with a smile on our face and a emotion of confidence, which was bring us to a joy, when Ian won the Best Start-up Pitch Presenter but unfortunately as a group we failed to get into the top 3. Still, we are looking to competing again in the next years Philippine Start-Up Pitching Competition and look out because we are better, hungrier, and more determine to achieve that goal so look forward for it. </p>
+                          </div>
+                          <a class="popup__close" href="#">X</a>
+                        </div>
+                      </div>
+                </div>      
+                <div class="blogs">
+                    <a href="#popup4" id="modalOpen">
+                    <div class="img">
+                        <img src="images/received_453343440282858.jpeg" alt="blog-two">
+                        <div class="blog-date">19 Sept,24</div>
+                    </div>
+                    <div class="blog-text">
+                        <h3>Concert,Concert,Concert</h3>
+                        <p>One of the best things I did in my life. Concert is like a drug, you can get obssessed with it you want to repeat it again and again and again. I was blessed to see the beautiful and tough personality and voice of the one and only Queen Jessi, also two of the KPOP groups I stan are BLACKPINK and ITZY. Seeing them live is a dream come true. </p>
+                    </div></a>
+                    <div class="popup" id="popup4">
+                        <div class="popup-inner">
+                        <video id="concert" width="100%" height="100%" controls>
+                            <source src="images/lv_0_20240919131250.mp4" type="video/mp4">
+                        </video>
+                          <a class="popup__close" href="#">X</a>
+                        </div>
+                      </div>
+                </div>      
+                <div class="blogs">
+                    <a href="#popup5" id="modalOpen">
+                    <div class="img">
+                        <img src="images/received_1229072171309656.jpeg" alt="blog-two">
+                        <div class="blog-date">21 Nov,23</div>
+                    </div>
+                    <div class="blog-text">
+                        <h3>Aritificial Intelligence Training Arc</h3>
+                        <p>The NU Lipa gives us an unforgettable memories and knowledge when they give us the ticket to attend a AI Seminar about its philisophies, ethics, and the beauty of it.I was amazed and was really motivated to pursue this kind of field in my program which is Computer Science.</p>
+                    </div></a>
+                    <div class="popup" id="popup5">
+                        <div class="popup-inner">
+                          <div class="popup__photo">
+                            <img src="images/received_1229072171309656.jpeg" alt="">
+                          </div>
+                          <div class="popup__text">
+                            <h1>Past,Present and Future of Artificial Intelligence</h1>
+                            <p>The NU Lipa gives us an unforgettable memories and knowledge when they give us the ticket to attend a AI Seminar about its philisophies, ethics, and the beauty of it.I was amazed and was really motivated to pursue this kind of field in my program which is Computer Science. I learned many things, from how they are needed in every field like business, medical, and etc. Among all of them I was so intrigue on this one seminar called AI in Creative Arts and there I was encourage to study the magic and logic behind image generation. Until now, I am currently studying it and still enjoying prompting and creating new images and I wish I will learn how to train one in the future</p>
+                          </div>
+                          <a class="popup__close" href="#">X</a>
+                        </div>
+                      </div>
+                </div>      
+            </div>
+               <!--copyright-section You Can Remove After Downloading-->
+               <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Marc Miranda
+                </div>
+               </div>
+       <!--copyright-section-->
+        </div>
+        <!--blog end-->
+        <!--contact-->
+     <div id="contact">
+        <div class="color-changer">
+            <div class="color-panel">
+                <img src="images/gear.png" alt="">
+            </div>
+            <div class="color-selector">
+                <div class="heading">Custom Colors</div>
+                <div class="colors">
+                    <ul >
+                    <li>
+                        <a href="#0" class="color-red " title="color-red"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-purple" title="color-purple"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-gold" title="color-gold"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-green" title="color-green"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-blue" title="color-blue"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-pink" title="color-pink"></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+         <div class="contact-header">Contact <span class="color"> Me</span>
+        <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div></div>
+        <div class="contact-content">
+            <!--Contact form-->
+             <div class="contact-form">
+                 <div class="form-header">
+                     Message Me
+                 </div>
+                 <form id="myForm" action="#">
+                    <div class="input-line">
+                        <input  id="name" type="text" placeholder="Name" class="input-name">
+                        <input id="email" type="email" placeholder="Email"  class="input-name">
+                    </div>
+                    <input type="text" id="subject" placeholder="Subject" class="input-subject">
+                    <textarea id ="body" class="input-textarea" placeholder="Write your Message Here"></textarea>
+                    <button type="button" id ="submit" value="send">Submit</button>
+                 </form>
+               
+             </div>
+            <!--Contact form-->
+            <!--Contact information-->
+             <div class="contact-info">
+                <div class="contact-info-header">
+                    Contact Info
+                </div>
+                <div class="contact-info-content">
+                <div class="contect-info-content-line">
+                    <img src="./images/icon-name.png" class="icon" alt="name-icon">
+                    <div class="contact-info-icon-text">
+                        <h6>Name</h6>
+                        <p>Marc Louisse Miranda</p>
+                  </div>
+                </div>
+                <div class="contect-info-content-line">
+                  <img src="./images/icon-location.png" class="icon" alt="location-icon">
+                  <div class="contact-info-icon-text">
+                      <h6>Location</h6>
+                      <p>Lipa Batangas, Philippines</p>
+                </div>
+              </div>
+              <div class="contect-info-content-line">
+                  <img src="./images/icon-phone.png" class="icon" alt="phone-icon">
+                  <div class="contact-info-icon-text">
+                      <h6>Call</h6>
+                      <p>09912600667</p>
+                </div>
+              </div>
+              
+              <div class="contect-info-content-line">
+                  <img src="./images/icon-email.png" class="icon" alt="email-icon">
+                  <div class="contact-info-icon-text">
+                      <h6>Email</h6>
+                      <p>marcmrnda@gmail.com</p>
+                </div>
+              </div>
+                </div>
+            <!--Contact information end-->
+           </div>
+        </div>
+                    <!--copyright-section You Can Remove After Downloading-->
+                    <div class="footer">
+                        <div class="footer-text">
+                            <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Marc Miranda
+                       </div>
+               <!--copyright-section-->
+     </div>
+        <!--contact end-->
+    </div>
+    <!--all the divisions-->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/index.js"></script>
+    <!--particles script-->
+    <script>
+  particlesJS("particles", {"particles":{"number":{"value":40,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+    </script>
+
+</body>
+</html>

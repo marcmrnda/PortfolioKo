@@ -1,0 +1,95 @@
+/*-----------------
+* [Master Stylesheet]
+*
+* Theme    : WillyWonka
+* Version  : 1.0
+* Author   : sujal
+* 
+------------------*/
+::-webkit-scrollbar{
+    width: 4px;
+    color:#f14fff;
+}
+::-webkit-scrollbar-thumb {
+    background: #f14fff; 
+    border-radius: 4px;
+    width: 4px;
+  }
+  #team h1{
+    color: #f14fff;
+  }
+  #team h2{
+    color: #f14fff;
+  }
+  #team p {
+    color: #f14fff;
+  }
+
+  .fa-brands:hover{
+    color: #f14fff;
+  }
+  .contact i:hover{
+    color: #f14fff;
+  }
+
+  #breaker{
+      background-color: #f14fff;
+  }
+  .color{
+      color: #f14fff;
+  }
+  #about-content a{
+      color:#f14fff ;
+  }
+  .cv a button{
+      background: #f14fff;
+  }
+  .service-img img{
+    background: #f14fff;
+    box-shadow:0px 0px 0px 0px #f14fff ;
+  }
+  .service:hover .service-img img{
+    box-shadow:0px 0px 0px 400px #f14fff ;
+}
+.html-progress{
+    background: #f14fff;
+}
+.js-progress{
+    background: #f14fff;
+}
+.adobe-progress{
+    background: #f14fff;
+}
+.php-progress{
+    background: #f14fff;
+}
+.jquery-progress{
+    background: #f14fff;
+}
+.seo-progress{
+    background: #f14fff;
+}
+.portfolio-text h2{
+    color: #f14fff;
+}
+.portfolio-text button{
+    color: #f14fff;
+    border: 1.5px solid #f14fff;
+}
+.portfolio-text button::before{
+    background: #f14fff;
+}
+.portfolio-image img::before{
+    background: #f14fff;
+}
+.blog-date{
+    background: #f14fff;
+}
+form button{
+    background: #f14fff;
+}
+@media all and (max-width: 550px) and (min-width: 5px){
+    .service:hover .service-img img{
+        box-shadow:0px 0px 0px 0px #c70039 ;
+    }
+}
