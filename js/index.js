@@ -1,6 +1,6 @@
 $(window).on('load',function(){
   gsap.to('#loader',1,{y:"-100%",delay:4});
-  gsap.to('#loader',1,{opacity:0,delay:10000});
+  gsap.to('#loader',1,{opacity:0,delay:5});
   gsap.to('#loader',0,{display:"none",delay:5});
   gsap.to('#header',0,{display:"block",delay:5})
   gsap.to('#navigation-content',0,{display:"none"});
